@@ -1,2 +1,2 @@
 # pmel-planets
-demo repo for Software Carpentry
+Demonstration for Software Carpentry
