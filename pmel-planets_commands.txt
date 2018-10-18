@@ -1,0 +1,181 @@
+dietrich@DEMERSUS MINGW64 ~/Desktop/code
+$ git clone https://github.com/NOAA-PMEL/pmel-planets.git
+Cloning into 'pmel-planets'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code
+$ ls
+pmel-planets/
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code
+$ cd pmel-planets/
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ ls
+README.md
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ nano mercury.txt
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        mercury.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git add mercury.txt
+warning: LF will be replaced by CRLF in mercury.txt.
+The file will have its original line endings in your working directory.
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   mercury.txt
+
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git commit -m 'Add mercury.txt with interesting info'
+[master b434ed6] Add mercury.txt with interesting info
+ 1 file changed, 3 insertions(+)
+ create mode 100644 mercury.txt
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ nano mercury.txt
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   mercury.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git diff mercury.txt
+warning: LF will be replaced by CRLF in mercury.txt.
+The file will have its original line endings in your working directory.
+diff --git a/mercury.txt b/mercury.txt
+index fe615f5..7a011ef 100644
+--- a/mercury.txt
++++ b/mercury.txt
+@@ -1,3 +1,4 @@
+ 1. The closest planet to the sun
+ 1. Orbital period is 0.240 Julian years
+ 1. Mariner 10 flew by in 1974
++1. MESSENGER orbited 4000+ times before crashing 2015/04/30
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git add mercury.txt
+warning: LF will be replaced by CRLF in mercury.txt.
+The file will have its original line endings in your working directory.
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   mercury.txt
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git diff
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git log
+commit b434ed6ef3fb8e744643f83fda9ea3c6efd90b16 (HEAD -> master)
+Author: Colin Dietrich <colin.dietrich@noaa.gov>
+Date:   Thu Oct 18 13:46:09 2018 -0700
+
+    Add mercury.txt with interesting info
+
+commit 43d781afc14d209825836fd9d370d970d7b23ec9 (origin/master, origin/HEAD)
+Author: Colin Dietrich <colin.dietrich@noaa.gov>
+Date:   Thu Oct 18 13:27:29 2018 -0700
+
+    Update description
+
+commit 5e3895aec57bf12188cd9c257e2576877a99c91d
+Author: Colin Dietrich <colin.dietrich@noaa.gov>
+Date:   Thu Oct 18 13:26:04 2018 -0700
+
+    Initial commit
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git commit -m 'Add more interesting info about Mercury'
+[master 8977f2d] Add more interesting info about Mercury
+ 1 file changed, 1 insertion(+)
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git diff
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git log
+commit 8977f2da39c0683833728d15f4225b09d72d9d0c (HEAD -> master)
+Author: Colin Dietrich <colin.dietrich@noaa.gov>
+Date:   Thu Oct 18 13:54:59 2018 -0700
+
+    Add more interesting info about Mercury
+
+commit b434ed6ef3fb8e744643f83fda9ea3c6efd90b16
+Author: Colin Dietrich <colin.dietrich@noaa.gov>
+Date:   Thu Oct 18 13:46:09 2018 -0700
+
+    Add mercury.txt with interesting info
+
+commit 43d781afc14d209825836fd9d370d970d7b23ec9 (origin/master, origin/HEAD)
+Author: Colin Dietrich <colin.dietrich@noaa.gov>
+Date:   Thu Oct 18 13:27:29 2018 -0700
+
+    Update description
+
+commit 5e3895aec57bf12188cd9c257e2576877a99c91d
+Author: Colin Dietrich <colin.dietrich@noaa.gov>
+Date:   Thu Oct 18 13:26:04 2018 -0700
+
+    Initial commit
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$
