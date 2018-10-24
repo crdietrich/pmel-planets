@@ -223,3 +223,40 @@ $ nano .gitignore
 
 (created ignore list for .asv and .Rhistory files)
 (commited and pushed via Spyder3)
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ ls
+mars.py  mercury.txt  pmel-planets_commands.txt  README.md  venus.asv  venus.m
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   pmel-planets_commands.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git add pmel-planets_commands.txt
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git commit -m 'update bash command record'
+[master 19816ff] update bash command record
+ 1 file changed, 45 insertions(+), 1 deletion(-)
+
+dietrich@DEMERSUS MINGW64 ~/Desktop/code/pmel-planets (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 769 bytes | 769.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/NOAA-PMEL/pmel-planets.git
+   5ebc966..19816ff  master -> master
